@@ -33,7 +33,7 @@ public class App
                     case 1:
                         System.out.println("Anna hirviön tyyppi:");
                         String monsterType = sc.nextLine();
-                        System.out.println("Anna hirviön elämän määrä numeroina: ");
+                        System.out.println("Anna hirviön elämän määrä numerona:");
                         int health = sc.nextInt();
                         sc.nextLine();
                         Monster monster = new Monster(monsterType, health);
