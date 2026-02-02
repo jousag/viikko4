@@ -26,15 +26,14 @@ public class App
             System.out.println("0) Lopeta peli");
 
             if(sc.hasNext()) {
-                int i = 0;
-                String stringInput = sc.nextLine();
-                i = Integer.parseInt(stringInput);
+                int i = sc.nextInt();
+                sc.nextLine();
 
                 switch(i) {
                     case 1:
                         System.out.println("Anna hirviön tyyppi:");
                         String monsterType = sc.nextLine();
-                        System.out.println("Anna hirviön elämän määrä numeroina:");
+                        System.out.println("Anna hirviön elämän määrä numeroina: ");
                         int health = sc.nextInt();
                         sc.nextLine();
                         Monster monster = new Monster(monsterType, health);
@@ -44,10 +43,11 @@ public class App
                         if (cave.getMonsters() == null || cave.getMonsters().isEmpty()) {
                         System.out.println("Luola on tyhjä.");
                         break;
-                        }
+                        } else {
                         System.out.println("Luolan hirviöt:");
                         cave.listMonsters();
                         break;
+                        }
                     case 3:
                         System.out.println("Valitse hirviö, johon hyökätä:");
                         cave.listMonsters();
